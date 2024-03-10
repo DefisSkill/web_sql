@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Настройки
+{% endblock %}
+
+{% block content %}
+        <div class="container">
+            <label for="uname" style="margin-top:10%; font-size:30px; color:white;"><b>Имя пользователя:</b></label>
+            <input type="text" placeholder="Введите имя пользователя" name="uname" required>
+            <label for="psw" style="margin-top:1%; font-size:30px; color:white;"><b>Пароль:</b></label>
+            <input type="password" placeholder="Введите пароль" name="psw" required>
+            <button type="submit">Авторизоваться</button>
+
+            <div id="emailHelp" class="form-text" style="font-size:15px; color:white">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+{% endblock %}

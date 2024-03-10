@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/Emblem.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <aside>
+        <img src="{{ url_for('static', filename='img/Emblem.png') }}" alt="Логотип" class="center">
+        <h1 class="LogoName">Документальная база Федеральной службы охраны Российской Федерации</h1>
+        <h3 class="Navigate">Навигация по веб-ресурсу:</h3>
+        <ul>
+            <li>
+                <a href="/">
+                    <img class="svg" src="{{ url_for('static', filename='icons/house.svg') }}" alt="Домик">
+                    <span class="text_svg">Главная</span>
+                </a>
+            </li>
+            <li>
+                <a href="/documents">
+                    <img class="svg" src="{{ url_for('static', filename='icons/bookmark.svg') }}" alt="Закладка">
+                    <span class="text_svg">Документы</span>
+                </a>
+            </li>
+            <li>
+                <a href="/discussion">
+                    <img class="svg" src="{{ url_for('static', filename='icons/comments.svg') }}" alt="Сообщения">
+                    <span class="text_svg">Обсуждение</span>
+                </a>
+            </li>
+            <li>
+                <a href="/settings">
+                    <img class="svg" src="{{ url_for('static', filename='icons/bars.svg') }}" alt="Настройки">
+                    <span class="text_svg">Настройки</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

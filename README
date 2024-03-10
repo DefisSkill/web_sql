@@ -1,0 +1,10 @@
+Начало работы с
+pip install -r .\requirements.txt
+python.exe -m pip install --upgrade pip
+
+
+
+pyuic5 name.ui -o name.py - ui в py
+
+
+pip freeze > requirements.txt - вывести библы все
