@@ -6,13 +6,16 @@
 
 {% block content %}
         <div class="container">
-            <label for="uname" style="margin-top:10%; font-size:30px; color:white;"><b>Имя пользователя:</b></label>
+            <label for="uname" style="margin-top:5%; font-size:30px; color:white; font-weight: bold;">
+                <div id="help" class="form-text" style="font-size:40px; color:white; margin-left: 120px;">
+                    Для доступа к настройкам необходимо авторизоваться
+                </div>
+                <b>Имя пользователя:</b></label>
             <input type="text" placeholder="Введите имя пользователя" name="uname" required>
             <label for="psw" style="margin-top:1%; font-size:30px; color:white;"><b>Пароль:</b></label>
             <input type="password" placeholder="Введите пароль" name="psw" required>
             <button type="submit">Авторизоваться</button>
-
-            <div id="emailHelp" class="form-text" style="font-size:15px; color:white">
+            <div id="alert" class="form-text" style="font-size:20px; color:white; text-align:center;">
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
                         {% for message in messages %}
@@ -20,6 +23,6 @@
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
-            </div>
+                </div>
         </div>
 {% endblock %}

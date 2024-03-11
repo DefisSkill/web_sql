@@ -4,6 +4,12 @@
 Обсуждение
 {% endblock %}
 
-{% block body %}
-<h1>Страница обсуждения</h1>
+{% block content %}
+        <div class="container">
+            <label for="uname" style="margin-top:1%; font-size:30px; color:white;"><b>Имя пользователя:</b></label>
+            <input type="text" placeholder="Введите имя пользователя" name="uname" required>
+            <label for="txt" style="margin-top:1%; font-size:30px; color:white;"><b>Комментарий:</b></label>
+            <input type="text" placeholder="Введите текст" name="txt" required>
+            <button type="submit">Отправить</button>
+        </div>
 {% endblock %}

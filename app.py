@@ -20,7 +20,8 @@ def discussion_page():
 
 @app.route('/settings', methods=('GET', 'POST'))
 def setting_page():
-	flash('Ваши данные будут использованы только для авторизации')
+	flash_text = ''
+	flash(flash_text)
 	return render_template('setting_page.html')
 
 
